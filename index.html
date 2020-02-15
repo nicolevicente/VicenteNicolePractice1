@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Event</title>
+    <script src="js/form.js"></script>
+</head>
+<body>
+    <form name="myForm">
+        <fieldset>Event Type: <select id="eventType" name="eventType" required>
+
+            <option selected="selected" value="">Choose one</option>
+            <option value="0">Internal</option>
+            <option value="1">External</option>
+            <option value="2">Others</option>
+            </select>
+        <br><br>
+
+        <label for="title">Event Title: </label>
+            <input type="text" id="event" name="event" required><br><br>
+
+        <label for="dates">Event Dates: </label>
+            <input type="text" placeholder="mm/dd/yyyy" id="date1" name="date1" pattern = "^(((0)[0-9])|((1)[0-2]))([\/])([0-2][0-9]|(3)[0-1])([\/])([0-9]{4})$" minlength="10" maxlength="10" required> to 
+            <input type="text" placeholder="mm/dd/yyyy" id="date2" name="date2" pattern = "^(((0)[0-9])|((1)[0-2]))([\/])([0-2][0-9]|(3)[0-1])([\/])([0-9]{4})$" minlength="10" maxlength="10" required><br><br>
+        
+        <label for="pdate">Posting Date: </label>
+            <input type="text" placeholder="mm/dd/yyyy" id="pdate" name="pdate" pattern = "^(((0)[0-9])|((1)[0-2]))([\/])([0-2][0-9]|(3)[0-1])([\/])([0-9]{4})$" minlength="10" maxlength="10" required><br><br>
+
+    <div id="checkbox">      
+        <input type="checkbox" id="q1" name="box" value="q1">
+            <label for="q1"> Is Registration Required?</label><br>
+        <input type="checkbox" id="q2" name="box" value="q2">
+            <label for="q2"> Is this event associated with any Family Programs?</label><br>
+        <input type="checkbox" id="q3" name="box" value="q3">
+            <label for="q3"> Upon Registration Completion, Are Users to Receive an Auto Generated Email?</label><br>
+        <input type="checkbox" id="q4" name="box" value="q4">
+            <label for="q4"> Is there a Point of Contact?</label><br>
+        <input type="checkbox" id="q5" name="box" value="q5">
+            <label for="q5"> Is There a Hosting Command Point of Contact?</label><br><br><br>
+    </div>
+        
+        <center>
+            <input type="submit" value="Save" onclick="validate()">
+            <input type="reset" value="Cancel" onclick="clearData()">
+        </center>
+
+    </fieldset>     
+    </form>
+</body>
+</html>
